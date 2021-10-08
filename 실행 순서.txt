@@ -1,0 +1,22 @@
+가상환경 생성 
+- conda create -n "가상환경이름' python==3.7
+- conda activate 가상환경이름
+- pip install -r requirments.txt
+
+1. configuration.py에서 pascal_voc_root,  txt_file_dir 를 지정 해준다.
+2. (1)에서 지정해준 루트에, roboflow에서 voc format으로 데이터를 받아준다.
+3.  configuration.py에서 load_flag, work_type 을 변경하면서,  split_xml_jpg.py 실행
+4. write_to_txt를 실행 해준다. - load_flag를 바꿔주며, "종류"_annotation.txt 생성
+
+(이미지경로 height width 박스-4개 class) 순으로 저장
+
+5. train.py 실행 해주기 -- 학습 시작
+# validation_loss 측정 함수 만들어 주기
+# 그래프 시각화
+- 다른 코드에서 loss_reset 한느지 찾아보기
+
+6. configuration.py에 test_image_dir - test진행할 이미지 선정
+7. test.py를 통해서 확인 해보기.
+8. 결과가 이상하면 configuration.py에서   score_threshold = 0.3 조정 해보기 ( 현재 score 확인해서 조정 )
+
+
