@@ -57,8 +57,8 @@ class Config:
     test_txt_file_dir = pascal_voc_root + "test_annotations.txt"
 
     # test image    --
-    test_image_dir = "C:/Users/yutan/Desktop/EfficientDet_TensorFlow2/test_pictures/ck0kfhu4n8q7f0701ixmonyig_jpeg.rf.a3cc5282520b3bac90718bdd5528bd76.jpg"
-    #test_image_dir = "C:/Users/yutan/Desktop/EfficientDet_TensorFlow2/test_pictures/smoking_women.jpg"
+    #test_image_dir = "C:/Users/yutan/Desktop/EfficientDet_TensorFlow2/test_pictures/ck0kfhu4n8q7f0701ixmonyig_jpeg.rf.a3cc5282520b3bac90718bdd5528bd76.jpg"
+    test_image_dir = "C:/Users/yutan/Desktop/EfficientDet_TensorFlow2/test_pictures/smoking_women.jpg"
 
     # anchors
     num_anchor_per_pixel = 9

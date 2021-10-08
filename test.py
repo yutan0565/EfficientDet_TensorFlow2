@@ -26,6 +26,7 @@ def test_single_picture(picture_dir, model):
     image = tf.expand_dims(input=image, axis=0)
 
     outputs = model(image, training=False)
+    print(outputs)
     post_process = PostProcessing()
     boxes, scores, classes = post_process.testing_procedure(outputs, [image_array.shape[0], image_array.shape[1]])
     print("-"*50)
