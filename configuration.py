@@ -43,22 +43,25 @@ class Config:
     num_classes = 1
 
     #여기서 사용하게 될 데이터 먼저  고르기
-    pascal_voc_root = "C:/Users/yutan/Desktop/EfficientDet_TensorFlow2/data/fire_smoke/"
+    pascal_voc_root = "./data/fire_smoke/"
     pascal_voc_classes = {"smoke": 0}
     max_boxes_per_image = 20
     resize_mode = "RESIZE"
 
     # txt file
     # 해당 데이터셋에 맞는 annotation 파일 생성
-    load_flag = "valid"
-    work_type = "valid"  ## 데이터 분리할때 사용
+    load_flag = "train"
+    work_type = "train"  ## 데이터 분리할때 사용
     train_txt_file_dir = pascal_voc_root + "train_annotations.txt"
     val_txt_file_dir = pascal_voc_root +  "val_annotations.txt"
     test_txt_file_dir = pascal_voc_root + "test_annotations.txt"
 
     # test image    --
-    #test_image_dir = "C:/Users/yutan/Desktop/EfficientDet_TensorFlow2/test_pictures/ck0kfhu4n8q7f0701ixmonyig_jpeg.rf.a3cc5282520b3bac90718bdd5528bd76.jpg"
-    test_image_dir = "C:/Users/yutan/Desktop/EfficientDet_TensorFlow2/test_pictures/smoking_women.jpg"
+    #연기 샘플
+    test_image_dir = "./test_pictures/ck0kfhu4n8q7f0701ixmonyig_jpeg.rf.a3cc5282520b3bac90718bdd5528bd76.jpg"
+
+    # 흡연 샘플
+    #test_image_dir = "./test_pictures/smoking_women.jpg"
 
     # anchors
     num_anchor_per_pixel = 9

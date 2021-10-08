@@ -77,9 +77,9 @@ if __name__ == '__main__':
             loss_value = post_process.training_procedure(pred, batch_labels)
         loss_metric_valid.update_state(values=loss_value)
 
-    # early stop - loss 가 떨어지지 않는 경우 조정해주는 함수
-    def early_stop(val_loss, epoch):
-        if
+    # # early stop - loss 가 떨어지지 않는 경우 조정해주는 함수
+    # def early_stop(val_loss, epoch):
+    #     if
 
 
 
