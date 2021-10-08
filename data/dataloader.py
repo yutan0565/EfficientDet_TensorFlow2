@@ -5,8 +5,11 @@ from configuration import Config
 
 
 class DetectionDataset:
-    def __init__(self):
-        self.txt_file = Config.txt_file_dir
+    def __init__(self, type):
+        if type == "train":
+            self.txt_file = Config.train_txt_file_dir
+        elif type == "valid":
+            self.txt_file = Config.val_txt_file_dir
         self.batch_size = Config.batch_size
 
     @staticmethod
@@ -15,6 +18,8 @@ class DetectionDataset:
         for _ in dataset:
             length += 1
         return length
+
+
 
     def generate_datatset(self):
         dataset = tf.data.TextLineDataset(filenames=self.txt_file)

@@ -5,9 +5,9 @@ from configuration import Config
 
 
 class ParseVOC:
-    def __init__(self):
-        self.all_xml_dir = Config.pascal_voc_root + "Annotations"
-        self.all_image_dir = Config.pascal_voc_root + "JPEGImages"
+    def __init__(self, type):
+        self.all_xml_dir = Config.pascal_voc_root +type+"/Annotations"
+        self.all_image_dir = Config.pascal_voc_root +type+"/JPEGImages"
         self.pascal_voc_classes = Config.pascal_voc_classes
 
     @staticmethod

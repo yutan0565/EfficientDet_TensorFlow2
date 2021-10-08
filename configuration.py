@@ -1,14 +1,14 @@
 
 
 class Config:
-    epochs = 50
-    batch_size = 8
+    epochs = 100
+    batch_size = 1
     learning_rate_decay_epochs = 10
 
     # save model
     save_model_dir = "saved_model/"
     load_weights_before_training = False
-    load_weights_from_epoch = 0
+    load_weights_from_epoch = 0   # last로 자동으로 만들어주는 코드 작성
     save_frequency = 5
 
     test_images_during_training = False
@@ -35,26 +35,30 @@ class Config:
     d_class = {"D0": 3, "D1": 3, "D2": 3, "D3": 4, "D4": 4, "D5": 4, "D6": 5, "D7": 5}
 
     # nms
-    score_threshold = 0.01
+    score_threshold = 0.25
     iou_threshold = 0.5
     max_box_num = 100
 
     # dataset
-    num_classes = 20
-    pascal_voc_root = "./data/datasets/VOCdevkit/VOC2012/"
-    pascal_voc_classes = {"person": 0, "bird": 1, "cat": 2, "cow": 3, "dog": 4,
-                          "horse": 5, "sheep": 6, "aeroplane": 7, "bicycle": 8,
-                          "boat": 9, "bus": 10, "car": 11, "motorbike": 12,
-                          "train": 13, "bottle": 14, "chair": 15, "diningtable": 16,
-                          "pottedplant": 17, "sofa": 18, "tvmonitor": 19}
+    num_classes = 1
+
+    #여기서 사용하게 될 데이터 먼저  고르기
+    pascal_voc_root = "C:/Users/yutan/Desktop/EfficientDet_TensorFlow2/data/fire_smoke/"
+    pascal_voc_classes = {"smoke": 0}
     max_boxes_per_image = 20
     resize_mode = "RESIZE"
 
-    # test image
-    test_image_dir = ""
-
     # txt file
-    txt_file_dir = "data.txt"
+    # 해당 데이터셋에 맞는 annotation 파일 생성
+    load_flag = "valid"
+    work_type = "valid"  ## 데이터 분리할때 사용
+    train_txt_file_dir = pascal_voc_root + "train_annotations.txt"
+    val_txt_file_dir = pascal_voc_root +  "val_annotations.txt"
+    test_txt_file_dir = pascal_voc_root + "test_annotations.txt"
+
+    # test image    --
+    test_image_dir = "C:/Users/yutan/Desktop/EfficientDet_TensorFlow2/test_pictures/ck0kfhu4n8q7f0701ixmonyig_jpeg.rf.a3cc5282520b3bac90718bdd5528bd76.jpg"
+    #test_image_dir = "C:/Users/yutan/Desktop/EfficientDet_TensorFlow2/test_pictures/smoking_women.jpg"
 
     # anchors
     num_anchor_per_pixel = 9

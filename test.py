@@ -28,6 +28,16 @@ def test_single_picture(picture_dir, model):
     outputs = model(image, training=False)
     post_process = PostProcessing()
     boxes, scores, classes = post_process.testing_procedure(outputs, [image_array.shape[0], image_array.shape[1]])
+    print("-"*50)
+    print("boxes")
+    print(boxes)
+    print("-" * 50)
+    print("scores")
+    print(scores)
+    print("-" * 50)
+    print("classes")
+    print(classes)
+    print("-" * 50)
     image_with_boxes = draw_boxes_on_image(image_array, boxes.astype(np.int), scores, classes)
     return image_with_boxes
 
