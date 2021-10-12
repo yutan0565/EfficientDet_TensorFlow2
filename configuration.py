@@ -2,13 +2,13 @@
 
 class Config:
     epochs = 100
-    batch_size = 1
+    batch_size = 16
     learning_rate_decay_epochs = 10
 
     # save model
     save_model_dir = "saved_model/"
     load_weights_before_training = False
-    load_weights_from_epoch = 0   # last로 자동으로 만들어주는 코드 작성
+    load_weights_from_epoch = 20   # last로 자동으로 만들어주는 코드 작성
     save_frequency = 5
 
     test_images_during_training = False

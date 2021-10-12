@@ -117,8 +117,8 @@ if __name__ == '__main__':
 
         if epoch >= 2:
             x_len = np.arange(epoch+1)
-            plt.plot(x_len, temp_loss_1, marker='-', c='red', label="Train-set Loss")
-            plt.plot(x_len, temp_loss_2, marker='-', c='blue', label="Valid-set Loss")
+            plt.plot(x_len, temp_loss_1, marker='.', c='red', label="Train-set Loss")
+            plt.plot(x_len, temp_loss_2, marker='.', c='blue', label="Valid-set Loss")
             plt.legend(loc='upper right')
             plt.grid()
             plt.xlabel('epoch')
