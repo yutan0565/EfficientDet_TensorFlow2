@@ -19,6 +19,7 @@ def print_model_summary(network):
 if __name__ == '__main__':
     # GPU settings
     gpus = tf.config.list_physical_devices("GPU")
+    print(gpus)
     if gpus:
         for gpu in gpus:
             tf.config.experimental.set_memory_growth(gpu, True)

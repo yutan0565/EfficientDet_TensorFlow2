@@ -2,7 +2,7 @@
 
 class Config:
     epochs = 100
-    batch_size = 16
+    batch_size = 32
     learning_rate_decay_epochs = 10
 
     # save model
