@@ -1,15 +1,18 @@
 
 
 class Config:
-    epochs = 100
+    epochs = 601
     batch_size = 32
-    learning_rate_decay_epochs = 10
+    learning_rate_decay_epochs = 20
 
     # save model
     save_model_dir = "saved_model/"
     load_weights_before_training = False
-    load_weights_from_epoch = 20   # last로 자동으로 만들어주는 코드 작성
-    save_frequency = 5
+    load_weights_from_epoch = 0   # last로 자동으로 만들어주는 코드 작성
+    
+    load_weights_from_epoch_quan = 330
+    
+    save_frequency = 10
 
     test_images_during_training = False
     training_results_save_dir = "./test_pictures/"
@@ -35,7 +38,7 @@ class Config:
     d_class = {"D0": 3, "D1": 3, "D2": 3, "D3": 4, "D4": 4, "D5": 4, "D6": 5, "D7": 5}
 
     # nms
-    score_threshold = 0.25
+    score_threshold = 0.1  # 0.01
     iou_threshold = 0.5
     max_box_num = 100
 
