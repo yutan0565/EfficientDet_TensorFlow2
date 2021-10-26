@@ -8,7 +8,7 @@ class Config:
     # save model
     save_model_dir = "saved_model/"
     load_weights_before_training = False
-    load_weights_from_epoch = 0   # last로 자동으로 만들어주는 코드 작성
+    load_weights_from_epoch = 340   # last로 자동으로 만들어주는 코드 작성
     
     load_weights_from_epoch_quan = 330
     
