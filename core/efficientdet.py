@@ -71,6 +71,7 @@ class PostProcessing:
 class BoxTransform:
 
     def __call__(self, boxes, deltas, *args, **kwargs):
+        print(deltas)
         deltas = deltas.numpy()
         widths = boxes[:, :, 2] - boxes[:, :, 0]
         heights = boxes[:, :, 3] - boxes[:, :, 1]
