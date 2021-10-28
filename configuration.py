@@ -1,18 +1,18 @@
 
 
 class Config:
-    epochs = 600 #601
+    epochs = 1000 #601
     batch_size = 32 # 32
-    learning_rate_decay_epochs = 50
+    learning_rate_decay_epochs = 20
 
     # save model
     save_model_dir = "saved_model/"
     load_weights_before_training = False
     load_weights_from_epoch = 340   # last로 자동으로 만들어주는 코드 작성
     
-    load_weights_from_epoch_quan = 330
+    load_weights_from_epoch_quan = 555
     
-    save_frequency = 5
+    save_frequency = 10
 
     test_images_during_training = False
     training_results_save_dir = "./test_pictures/"
@@ -40,21 +40,22 @@ class Config:
     # nms
     score_threshold = 0.1  # 0.01
     iou_threshold = 0.5
-    max_box_num = 100
+    max_box_num = 2
 
     # dataset
     num_classes = 1
 
     #여기서 사용하게 될 데이터 먼저  고르기
-    pascal_voc_root = "./data/fire_smoke/"
+    pascal_voc_root = "./data/fire_smoke_aug/"
     pascal_voc_classes = {"smoke": 0}
     max_boxes_per_image = 20
     resize_mode = "RESIZE"
 
     # txt file
     # 해당 데이터셋에 맞는 annotation 파일 생성
-    load_flag = "train"
-    work_type = "train"  ## 데이터 분리할때 사용
+    type = "test"
+    load_flag = type
+    work_type = type  ## 데이터 분리할때 사용
     train_txt_file_dir = pascal_voc_root + "train_annotations.txt"
     val_txt_file_dir = pascal_voc_root +  "val_annotations.txt"
     test_txt_file_dir = pascal_voc_root + "test_annotations.txt"
@@ -105,5 +106,3 @@ class Config:
     @classmethod
     def get_d_class(cls):
         return cls.d_class[cls.network_type]
-
-

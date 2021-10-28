@@ -10,17 +10,20 @@ def createFolder(directory):
             os.makedirs(directory)
     except OSError:
         print('Error: Creating directory. ' + directory)
+
 path_dir = Config.pascal_voc_root + Config.work_type
 createFolder(path_dir+"/Annotations")
 createFolder(path_dir+"/JPEGImages")
-
+print(path_dir)
 file_list = os.listdir(path_dir)
 print(file_list)
 
 for file in file_list:
+    print(file)
     if file == "Annotations" or file == "JPEGImages":
         continue
     source = path_dir+"/" + file
+    print(source)
 
     if ".jpg" ==source[-4:]:
         destination = path_dir+"/JPEGImages/"+ file

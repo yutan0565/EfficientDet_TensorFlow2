@@ -51,7 +51,11 @@ if __name__ == '__main__':
             tf.config.experimental.set_memory_growth(gpu, True)
 
     efficientdet = EfficientDet()
-    efficientdet.load_weights(filepath=Config.save_model_dir + "saved_model")
+    #efficientdet.load_weights(filepath=Config.save_model_dir + "saved_model")
+
+    load_weights_from_epoch = Config.load_weights_from_epoch_quan
+    efficientdet.load_weights(filepath=Config.save_model_dir + "epoch-{}".format(load_weights_from_epoch))
+
 
     image = test_single_picture(picture_dir=Config.test_image_dir, model=efficientdet)
 
