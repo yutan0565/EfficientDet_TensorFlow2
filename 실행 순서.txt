@@ -19,4 +19,5 @@
 7. test.py를 통해서 확인 해보기.
 8. 결과가 이상하면 configuration.py에서   score_threshold = 0.3 조정 해보기 ( 현재 score 확인해서 조정 )
 
+dsdddddddddddddddddddddddddd
 

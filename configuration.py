@@ -1,24 +1,26 @@
 
 
 class Config:
-    epochs = 1000 #601
-    batch_size = 32 # 32
-    learning_rate_decay_epochs = 20
+    epochs = 50 #601
+    batch_size = 1 # 32
+    learning_rate_decay_epochs = 10
 
     # save model
     save_model_dir = "saved_model/"
+    best_model_dir = "best_model/"
+
     load_weights_before_training = False
     load_weights_from_epoch = 340   # last로 자동으로 만들어주는 코드 작성
     
-    load_weights_from_epoch_quan = 555
+    load_weights_from_epoch_quan = 10
     
-    save_frequency = 10
+    save_frequency = 1
 
     test_images_during_training = False
     training_results_save_dir = "./test_pictures/"
     test_images_dir_list = ["", ""]
 
-    network_type = "D0"
+    network_type = "D1"
 
     # image size: (height, width)
     image_size = {"D0": (512, 512), "D1": (640, 640), "D2": (768, 768), "D3": (896, 896), "D4": (1024, 1024),
@@ -38,9 +40,9 @@ class Config:
     d_class = {"D0": 3, "D1": 3, "D2": 3, "D3": 4, "D4": 4, "D5": 4, "D6": 5, "D7": 5}
 
     # nms
-    score_threshold = 0.1  # 0.01
+    score_threshold = 0.000001  # 0.01
     iou_threshold = 0.5
-    max_box_num = 2
+    max_box_num = 1
 
     # dataset
     num_classes = 1
@@ -53,7 +55,7 @@ class Config:
 
     # txt file
     # 해당 데이터셋에 맞는 annotation 파일 생성
-    type = "test"
+    type = "valid"
     load_flag = type
     work_type = type  ## 데이터 분리할때 사용
     train_txt_file_dir = pascal_voc_root + "train_annotations.txt"
