@@ -1,0 +1,9 @@
+./data/pick_smoke/valid/JPEGImages/KakaoTalk_20211103_192433256_png.rf.ad07d77f33ce1cb57b7b9675b06e46a9.jpg 480 640 199 168 611 475 0
+./data/pick_smoke/valid/JPEGImages/KakaoTalk_20211103_192433256_png.rf.d2d4c7bcade5966776d6e0cf51d2a471.jpg 480 640 184 139 572 465 0
+./data/pick_smoke/valid/JPEGImages/KakaoTalk_20211103_192433256_png.rf.e7dc59491f551d0e7d3101192443637b.jpg 480 640 187 193 581 480 0
+./data/pick_smoke/valid/JPEGImages/me_1_jpg.rf.4a8ad3d8102a382a324bdd0ec2773567.jpg 480 640 262 180 418 473 0
+./data/pick_smoke/valid/JPEGImages/me_1_jpg.rf.6d0c1a27c6d6692ff936737b46552db8.jpg 480 640 240 203 393 480 0
+./data/pick_smoke/valid/JPEGImages/me_1_jpg.rf.f91382d45bdb5c9e319d5f783c0ab6e4.jpg 480 640 256 169 404 465 0
+./data/pick_smoke/valid/JPEGImages/smoking_women_jpg.rf.59025de0668a216501cd2346f6409b73.jpg 480 640 23 126 367 311 0
+./data/pick_smoke/valid/JPEGImages/smoking_women_jpg.rf.9d2b719ff4eb1f374c6a8adc964cf5e1.jpg 480 640 23 115 367 295 0
+./data/pick_smoke/valid/JPEGImages/smoking_women_jpg.rf.d023c5f9ffacf44e893d54dfb256d133.jpg 480 640 1 125 339 295 0

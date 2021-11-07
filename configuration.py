@@ -10,7 +10,7 @@ class Config:
     best_model_dir = "best_model/"
 
     load_weights_before_training = False
-    load_weights_from_epoch = 340   # last로 자동으로 만들어주는 코드 작성
+    load_weights_from_epoch = 10   # last로 자동으로 만들어주는 코드 작성
     
     load_weights_from_epoch_quan = 10
     
@@ -20,7 +20,7 @@ class Config:
     training_results_save_dir = "./test_pictures/"
     test_images_dir_list = ["", ""]
 
-    network_type = "D1"
+    network_type = "D0"
 
     # image size: (height, width)
     image_size = {"D0": (512, 512), "D1": (640, 640), "D2": (768, 768), "D3": (896, 896), "D4": (1024, 1024),
@@ -48,14 +48,14 @@ class Config:
     num_classes = 1
 
     #여기서 사용하게 될 데이터 먼저  고르기
-    pascal_voc_root = "./data/fire_smoke_aug/"
+    pascal_voc_root = "./data/pick_smoke/" # "./data/fire_smoke_aug/"
     pascal_voc_classes = {"smoke": 0}
     max_boxes_per_image = 20
     resize_mode = "RESIZE"
 
     # txt file
     # 해당 데이터셋에 맞는 annotation 파일 생성
-    type = "valid"
+    type = "train"
     load_flag = type
     work_type = type  ## 데이터 분리할때 사용
     train_txt_file_dir = pascal_voc_root + "train_annotations.txt"
