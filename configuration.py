@@ -6,11 +6,9 @@ class Config:
     learning_rate_decay_epochs = 10
 
     # save model
-    save_model_dir = "saved_model/"
     best_model_dir = "best_model/"
-
     load_weights_before_training = False
-    load_weights_from_epoch = 10   # last로 자동으로 만들어주는 코드 작성
+    load_weights_from_epoch = 340   # last로 자동으로 만들어주는 코드 작성
     
     load_weights_from_epoch_quan = 10
     
@@ -48,7 +46,7 @@ class Config:
     num_classes = 1
 
     #여기서 사용하게 될 데이터 먼저  고르기
-    pascal_voc_root = "./data/pick_smoke/" # "./data/fire_smoke_aug/"
+    pascal_voc_root = "./data/fire_smoke_aug/"
     pascal_voc_classes = {"smoke": 0}
     max_boxes_per_image = 20
     resize_mode = "RESIZE"
